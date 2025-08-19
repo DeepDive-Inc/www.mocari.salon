@@ -1,0 +1,114 @@
+:root {
+    --color-main: #FDFCFB;
+    /* オフホワイト */
+    --color-base: #EAE3D9;
+    /* サンドベージュ */
+    --color-accent: #C0A46B;
+    /* ゴールド */
+    --color-text: #333333;
+    /* ダークグレー */
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background-color: var(--color-main);
+    color: var(--color-text);
+}
+
+h1,
+h2,
+h3,
+.font-serif {
+    font-family: 'Noto Serif JP', serif;
+}
+
+.bg-sand-beige {
+    background-color: var(--color-base);
+}
+
+.text-gold {
+    color: var(--color-accent);
+}
+
+.border-gold {
+    border-color: var(--color-accent);
+}
+
+.bg-gold {
+    background-color: var(--color-accent);
+}
+
+.shadow-gold {
+    box-shadow: 0 4px 14px 0 rgba(192, 164, 107, 0.3);
+}
+
+/* Header Animation Definitions */
+@keyframes zoomIn {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes fadeInSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-zoom-in {
+    animation: zoomIn 15s ease-in-out infinite alternate;
+}
+
+.animate-fade-in-slide-up {
+    animation: fadeInSlideUp 1s ease-out forwards;
+    opacity: 0;
+}
+
+/* Scroll Animation */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Marker Highlight Style */
+.marker-highlight {
+    background-color: var(--color-accent);
+    color: white;
+    padding: 0.2em 0.6em;
+    display: inline;
+    line-height: 1.8;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+}
+
+/* Scroll to Top Button */
+#scrollTopBtn {
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+/* Particle Canvas Style */
+#particle-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
